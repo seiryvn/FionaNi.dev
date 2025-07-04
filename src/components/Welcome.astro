@@ -1,6 +1,6 @@
 ---
 import astroLogo from '../assets/astro.svg';
-import background from '../assets/background.svg';
+import snowflake from '../assets/snow.png';
 ---
 <!-- Hero -->
 <div>
@@ -16,3 +16,51 @@ import background from '../assets/background.svg';
 		</div>
 	</div>
 </div>
+
+<!-- falling particles -->
+<style>
+  .falling-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* lets user interact with the page */
+    overflow: hidden;
+    z-index: -1; /* behind everything */
+  }
+
+  .falling-item {
+    position: absolute;
+    top: -10%;
+    width: 50px;
+    height: 50px;
+    /* background: rgba(231, 231, 231, 0.7); white snowflake-like dot */
+	background: snowflake;
+	background-size: cover;
+    border-radius: 50%;
+    animation: fall linear infinite;
+  }
+
+  @keyframes fall {
+    0% {
+      transform: translateY(0) rotate(0deg);
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(120vh) rotate(360deg);
+      opacity: 0;
+    }
+  }
+</style>
+
+<!-- Background falling animation container -->
+<div class="falling-container">
+  {Array.from({ length: 10 }).map((_, i) => (
+    <div
+      class="falling-item text-5xl"
+      style={`left: ${Math.random() * 100}vw; animation-duration: ${3 + Math.random() * 10}s; animation-delay: ${Math.random() * 6}s`}
+    >❄️</div>
+  ))}
+</div>
+
