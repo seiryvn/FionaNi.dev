@@ -1,20 +1,36 @@
 ---
-import astroLogo from '../assets/astro.svg';
-import snowflake from '../assets/snow.png';
+import { Button } from "@/components/ui/button"
+import MyLink from "./custom_components/MyLink.astro"
 ---
 <!-- Hero -->
 <div>
-	<div class="flex flex-col justify-center text-center items-center align- mt-[15vw] mb-0">
-		<h1 class="text-[8vw]">Welcome.</h1>
-		<div>
-			<img
-			src="/PixelMeV2.gif" 
-			alt="PixelFiona"
-			width="700"
-			height="700"
-			/>
-		</div>
-	</div>
+  <div class="flex flex-row mt-[15vw]">
+    <!-- item1 -->
+    <div class="flex flex-col justify-left text-left items-baseline ml-[8.5%] mb-0 gap-0 p-0 z-2">
+        <div class="text-[125px]">
+          <h1>hello,</h1>
+          <h1>my name is</h1>
+          <h1>fiona ni</h1>
+        </div>
+    </div>
+    <!-- item2 -->
+    <div>
+        <!-- Pixel Image -->
+      <div class="z-10">
+        <img
+        src="/PixelMeV2.gif" 
+        alt="PixelFiona"
+        width="700"
+        height="700"
+        />
+      </div>
+    </div>
+  </div>
+
+  <!-- text and image section -->
+  <!-- <div class="flex flex-col justify-end text-right items-end">
+    <MyLink href="/about">click to navigate</MyLink>
+  </div> -->
 </div>
 
 <!-- falling particles -->
