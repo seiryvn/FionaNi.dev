@@ -1,5 +1,6 @@
 ---
 import { Button } from "@/components/ui/button"
+import TextAnimation from "./custom_components/TextAnimation"
 import MyLink from "./custom_components/MyLink.astro"
 ---
 <!-- Hero -->
@@ -7,10 +8,17 @@ import MyLink from "./custom_components/MyLink.astro"
   <div class="flex flex-row mt-[15vw]">
     <!-- item1 -->
     <div class="flex flex-col justify-left text-left items-baseline ml-[8.5%] mb-0 gap-0 p-0 z-2">
-        <div class="text-[125px]">
-          <h1>hello,</h1>
+        <div class="text-[125px] text-zinc-500">
+          <div>
+            <TextAnimation text="hello,"client:load/>
+            <TextAnimation text="my name is"client:load/>
+            <div class="text-black">
+              <TextAnimation text="fiona ni"client:load/>
+            </div>
+          </div>
+          <!-- <h1>hello,</h1>
           <h1>my name is</h1>
-          <h1>fiona ni</h1>
+          <h1 class="text-black">fiona ni</h1> -->
         </div>
     </div>
     <!-- item2 -->
