@@ -1,11 +1,18 @@
 ---
 import { Button } from "@/components/ui/button"
 import TextAnimation from "./custom_components/TextAnimation"
+import GestureText from "./custom_components/GestureText"
 import MyLink from "./custom_components/MyLink.astro"
 ---
 <!-- Hero -->
 <div>
-  <div class="flex flex-row mt-[15vw]">
+
+  <!-- header -->
+  <div class="flex m-[2%]">
+    <MyLink href="about">hello</MyLink>
+  </div>
+
+  <div class="flex flex-row mt-[5%]">
     <!-- item1 -->
     <div class="flex flex-col justify-left text-left items-baseline ml-[8.5%] mb-0 gap-0 p-0 z-2">
         <div class="text-[125px] text-zinc-500">
@@ -32,6 +39,7 @@ import MyLink from "./custom_components/MyLink.astro"
         height="700"
         />
       </div>
+      <!-- <GestureText client:load/> -->
     </div>
   </div>
 
@@ -71,6 +79,10 @@ import MyLink from "./custom_components/MyLink.astro"
       transform: translateY(0) rotate(0deg);
       opacity: 1;
     }
+    25% {
+      transform: translateY(30vh) rotate(90deg);
+      opacity: 0.5;
+    }
     100% {
       transform: translateY(120vh) rotate(360deg);
       opacity: 0;
@@ -84,7 +96,7 @@ import MyLink from "./custom_components/MyLink.astro"
     <div
       class="falling-item text-5xl"
       style={`left: ${Math.random() * 100}vw; animation-duration: ${3 + Math.random() * 10}s; animation-delay: ${Math.random() * 6}s`}
-    >❄️</div>
+    >★</div>
   ))}
 </div>
 
