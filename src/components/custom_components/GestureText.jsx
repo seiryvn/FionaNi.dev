@@ -1,12 +1,17 @@
 import * as motion from "motion/react-client"
 
-export default function Gestures() {
+export default function Gestures({text, link}) {
     return (
-        <motion.div
-            whileHover={{ scale: 1.2 }}
-            whileTap={{ scale: 0.8 }}
+        <a href={link}>
+            <motion.button
+            initial={{ color: "#000000"}}
+            whileHover={{ scale: 1.1, backgroundColor: "black", color: "#E6E6E6"}}
+            whileTap={{ scale: 1 }}
+            transition={{ type: "spring", stiffness: 600 }}
             style={box}
-        />
+            >{text}
+            </motion.button>
+        </a>
     )
 }
 
@@ -15,8 +20,10 @@ export default function Gestures() {
  */
 
 const box = {
-    width: 200,
-    height: 100,
-    backgroundColor: "#D3D3D3",
-    borderRadius: 5,
+    // width: 100,
+    // height: 50,
+    display: "inline-block",
+    padding: "10px 16px",
+    backgroundColor: "#E6E6E6",
+    borderRadius: 15,
     }
