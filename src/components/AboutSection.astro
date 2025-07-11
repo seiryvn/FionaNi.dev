@@ -1,6 +1,7 @@
 ---
 import TextAnimation from "./custom_components/TextAnimation"
 import BackgroundGradientV3 from "../assets/BackgroundGradientV3.png"
+import WaguriPlaceholder from "../assets/WaguriPlaceholder.jpg"
 ---
 
 
@@ -13,10 +14,18 @@ import BackgroundGradientV3 from "../assets/BackgroundGradientV3.png"
         </div>
         <!-- information section -->
         <div class="mt-[3%]">
-            <div id="card" class="flex flex-col gap-[1%] text-4xl">
-                <h1>Name</h1>
-                <h1>Student Information</h1>
+            <div id="card container">
+                <!-- first card -->
+                <div id="card" class="flex flex-col gap-[2%] text-4xl bg-black p-[10%] rounded-2xl hover:drop-shadow-2xl hover:drop-shadow-gray-500">
+                    <img class="rounded-2xl" src={WaguriPlaceholder.src} alt="Placeholder Image" width="350" height="350"
+                    />
+                    <div class="mt-5 text-gray-200">
+                        <h1>fiona ni</h1>
+                        <h1 class="text-2xl">@ boston college '2029</h1>
+                    </div>
+                </div>
             </div>
+            
         </div>
     </div>
 </div>
