@@ -24,6 +24,6 @@ const box = {
     // height: 50,
     display: "inline-block",
     padding: "10px 16px",
-    backgroundColor: "#E6E6E6",
+    backgroundColor: "#FFFFFF",
     borderRadius: 15,
     }
